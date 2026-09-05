@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全能工具箱 · iQOO Watch GT2</title>
-<meta name="description" content="iQOO Watch GT2 全能工具箱 v1.1.0 — 9 款实用小工具，74KB 轻量，蓝河应用（BlueOS 3）原生构建，根治全黑屏。">
+<title>全能工具箱 · iQOO Watch GT2 / GT / Watch 3</title>
+<meta name="description" content="iQOO Watch 全能工具箱 v1.1.6 — 9 款实用小工具（新增游戏中心 2D 台球、释放储存、快递查询、图文浏览器），支持手表端联网下载更新，89KB 轻量，蓝河应用（BlueOS 3）原生构建，适配 GT2 / GT / Watch 3 三机型。">
 <style>
 :root{
   --bg:#07070c; --bg2:#0d0d15; --card:rgba(255,255,255,.035); --line:rgba(255,255,255,.08);
@@ -62,11 +62,25 @@ h1 .grad{background:linear-gradient(120deg,var(--acc) 20%,#ff9f0a 55%,var(--acc2
 .watch .btn-s{position:absolute;right:-9px;top:52%;width:9px;height:34px;border-radius:6px;background:#26262f;z-index:2}
 .w-status{position:absolute;top:6%;width:100%;text-align:center;font-size:12px;color:var(--sub);letter-spacing:2px}
 .w-status b{color:var(--txt);font-size:15px;letter-spacing:0;display:block;margin-top:2px;font-weight:600}
-.w-grid{display:grid;grid-template-columns:repeat(3,54px);gap:11px;margin-top:42px}
-.w-tile{width:54px;height:54px;border-radius:15px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);display:grid;place-items:center;color:var(--acc);transition:.3s}
-.w-tile:nth-child(even){color:var(--acc2)}
-.w-tile.hot{background:linear-gradient(135deg,var(--acc),#ffb302);color:#131300;border:none;box-shadow:0 6px 24px rgba(255,214,10,.4)}
-.w-tile svg{width:23px;height:23px}
+.w-grid{display:grid;grid-template-columns:repeat(2,66px);gap:9px;margin-top:36px}
+.w-tile{width:66px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:14px;font-weight:700;color:#131300;transition:.3s}
+.w-tile.t0{background:linear-gradient(135deg,#ffd60a,#ffb302);box-shadow:0 6px 24px rgba(255,214,10,.35)}
+.w-tile.t1{background:linear-gradient(135deg,#ff453a,#ff6482)}
+.w-tile.t2{background:linear-gradient(135deg,#30d158,#28a745)}
+.w-tile.t3{background:linear-gradient(135deg,#ff375f,#ff6482)}
+.w-wide{width:141px;height:28px;border-radius:10px;display:grid;place-items:center;font-size:11.5px;font-weight:700;color:#131300;margin-top:6px;grid-column:1/-1;justify-self:center}
+.w-wide.p1{background:linear-gradient(135deg,#5e5ce6,#7a78f0)}
+.w-wide.p2{background:linear-gradient(135deg,#64d2ff,#3aa9ff)}
+.w-wide.p3{background:linear-gradient(135deg,#ff9f0a,#ffb340)}
+.w-wide.p4{background:linear-gradient(135deg,#bf5af2,#d08cf8)}
+.w-wide.p5{background:linear-gradient(135deg,#30d158,#28a745)}
+.w-grid .w-wide{margin-top:6px}
+.w-pair{display:flex;gap:9px;margin-top:6px;grid-column:1/-1;justify-content:center}
+.w-half{width:66px;height:28px;border-radius:10px;display:grid;place-items:center;font-size:9.5px;font-weight:700;color:#131300}
+.w-half.p1{background:linear-gradient(135deg,#5e5ce6,#7a78f0)}
+.w-half.p2{background:linear-gradient(135deg,#64d2ff,#3aa9ff)}
+.w-half.p3{background:linear-gradient(135deg,#ff9f0a,#ffb340)}
+.w-half.p4{background:linear-gradient(135deg,#bf5af2,#d08cf8)}
 
 /* 数据条 */
 .stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:10px 0 0}
@@ -106,7 +120,8 @@ section{position:relative;z-index:1;padding:84px 0}
 .feat p{font-size:14px;color:var(--sub)}
 
 /* 下载 */
-.dl{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.dl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:960px){.dl{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.dl{grid-template-columns:1fr}}
 .dl-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
 .dl-card.rec{border-color:rgba(255,214,10,.4);background:linear-gradient(160deg,rgba(255,214,10,.07),transparent 50%),var(--card)}
@@ -149,9 +164,9 @@ footer a{color:var(--acc)}
 
 <header class="hero wrap">
   <div>
-    <span class="badge"><span class="dot"></span>v1.1.0 · 蓝河应用原生版 · GT2 / GT 双机型适配</span>
+    <span class="badge"><span class="dot"></span>v1.1.6 · 蓝河应用原生版 · 新增游戏中心</span>
     <h1>方寸之间<br><span class="grad">九种兵器</span></h1>
-    <p class="lead">为 iQOO Watch GT2 与 GT 打造的全能工具箱。9 款日常高频小工具装进 74KB 的蓝河原生应用，纯离线运行，抬腕即用。</p>
+    <p class="lead">为 iQOO Watch GT2、GT 与 Watch 3 打造的全能工具箱。9 款日常高频小工具装进 89KB 的蓝河原生应用，新增 2D 台球小游戏与释放储存清单，支持手表端联网下载更新，轻快省电，抬腕即用。</p>
     <div class="cta">
       <a class="btn pri" href="#download">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -159,7 +174,7 @@ footer a{color:var(--acc)}
       </a>
       <a class="btn ghost" href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">查看源码仓库</a>
     </div>
-    <div class="meta"><span>⚡ 74KB 极小包体</span><span>🔒 零网络权限</span><span>🔋 传感器即用即停</span></div>
+    <div class="meta"><span>⚡ 89KB 极小包体</span><span>🔒 按需联网 · 无广告无追踪</span><span>🔋 传感器即用即停</span></div>
   </div>
 
   <div class="watch-zone">
@@ -168,15 +183,13 @@ footer a{color:var(--acc)}
       <div class="inner">
         <div class="w-status">9月5日 周六<b>10:09</b></div>
         <div class="w-grid">
-          <div class="w-tile hot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4M12 14l3-3-3-7-3 7 3 3zm0 0v0"/><circle cx="12" cy="14" r="8"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M9 4L7 20M17 4l-2 16"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5L13 13l-4.5 2.5L11 11l4.5-2.5z"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="8" width="18" height="8" rx="4"/><circle cx="16" cy="12" r="2" fill="currentColor"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h9l-2.5-2.5M16 17H7l2.5 2.5"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="8.5" cy="8.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="15.5" cy="8.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="8.5" cy="15.5" r="1.4" fill="currentColor" stroke="none"/></svg></div>
-          <div class="w-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l2-7 5 3 3-9 2 6h4"/><path d="M8 21h3m4 0h2"/></svg></div>
+          <div class="w-tile t0">计数</div>
+          <div class="w-tile t1">水平</div>
+          <div class="w-tile t2">换算</div>
+          <div class="w-tile t3">随机</div>
+          <div class="w-pair"><div class="w-half p1">每日名言</div><div class="w-half p2">浏览器</div></div>
+          <div class="w-pair"><div class="w-half p3">快递查询</div><div class="w-half p4">游戏中心</div></div>
+          <div class="w-wide p5">释放储存</div>
         </div>
       </div>
     </div>
@@ -185,10 +198,10 @@ footer a{color:var(--acc)}
 
 <div class="wrap">
   <div class="stats">
-    <div class="stat"><b>74KB</b><span>安装包体大小</span></div>
+    <div class="stat"><b>89KB</b><span>安装包体大小</span></div>
     <div class="stat"><b>9 款</b><span>高频实用工具</span></div>
-    <div class="stat"><b>0 个</b><span>网络权限申请</span></div>
-    <div class="stat"><b>432×514</b><span>方屏原生适配</span></div>
+    <div class="stat"><b>按需联网</b><span>更新 / 下载 / 一言 / 浏览才走网络</span></div>
+    <div class="stat"><b>3 机型</b><span>方屏 / 圆屏全适配</span></div>
   </div>
 </div>
 
@@ -200,15 +213,15 @@ footer a{color:var(--acc)}
       <p>每一款都为手表小屏交互重新设计：大按钮、滑动手势、抬腕即达。</p>
     </div>
     <div class="tools">
-      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg></div><h3>手电筒</h3><p>白光 / 红光双模式，屏幕常亮不怕熄，夜跑夜起一秒照亮。</p></div>
-      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div><h3>秒表</h3><p>毫秒级精度，支持计次记录，跑步间歇训练好搭档。</p></div>
-      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4M12 14l3-3-3-7-3 7 3 3z"/><circle cx="12" cy="14" r="8"/></svg></div><h3>倒计时</h3><p>预设快捷时长，到点震动提醒，泡面番茄钟两相宜。</p></div>
+      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div><h3>每日名言</h3><p>内置 48 句传世名言按天轮换，也可联网获取「一言」，抬腕即见智慧。</p></div>
       <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M9 4L7 20M17 4l-2 16"/></svg></div><h3>计数器</h3><p>大按钮加减、长按归零，楼层数、次数统计不再靠脑子记。</p></div>
-      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5L13 13l-4.5 2.5L11 11l4.5-2.5z"/></svg></div><h3>指南针</h3><p>八方位刻度环，度数实时显示，户外辨向抬腕就有。</p></div>
       <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="8" width="18" height="8" rx="4"/><circle cx="16" cy="12" r="2" fill="currentColor"/></svg></div><h3>水平仪</h3><p>气泡式双轴倾角检测，挂画装架，手表就是随身水平尺。</p></div>
       <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h9l-2.5-2.5M16 17H7l2.5 2.5"/></svg></div><h3>单位换算</h3><p>长度 / 重量 / 温度 / 容积四组常用换算，跑步配速换算利器。</p></div>
       <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="8.5" cy="8.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="15.5" cy="8.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="8.5" cy="15.5" r="1.4" fill="currentColor" stroke="none"/></svg></div><h3>随机助手</h3><p>骰子、硬币、随机数字，选择困难症和桌游局的神器。</p></div>
-      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l2-7 5 3 3-9 2 6h4"/><path d="M8 21h3m4 0h2"/></svg></div><h3>计步器</h3><p>实时步数，自动换算距离与千卡消耗，轻装出行不带手机。</p></div>
+      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>迷你浏览器</h3><p>搜索与书签全部基于百度，国内直连稳定；图文模式阅读网页，正文图片穿插显示，自动跟随跳转。</p></div>
+      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="13" rx="2"/><path d="M22 7l-7 6 7 5V7z" transform="translate(-2 -2)"/></svg></div><h3>快递查询</h3><p>输入快递单号自动识别公司，物流轨迹一目了然；支持中通 / 韵达 / 圆通 / 顺丰 / 京东等十家快递。</p></div>
+      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="3"/><circle cx="15" cy="9" r="3"/><circle cx="9.5" cy="16.5" r="3"/></svg></div><h3>游戏中心 · 2D 台球</h3><p>拖拽白球方向蓄力、松手击球；库边反弹、球球碰撞、六袋落袋全物理模拟，清台即胜利，更多小游戏持续加入。</p></div>
+      <div class="tool"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div><h3>释放储存</h3><p>手表空间清理清单：卸载闲置应用、清理聊天缓存、删离线音乐、精简表盘等六招，逐项勾选 + 振动反馈。</p></div>
     </div>
   </div>
 </section>
@@ -221,9 +234,9 @@ footer a{color:var(--acc)}
       <p>手表存储寸土寸金，电量弥足珍贵。我们把它做小、做省、做干净。</p>
     </div>
     <div class="feats">
-      <div class="feat"><div class="num">74 KB</div><h3>极致小包体</h3><p>纯代码实现，蓝河原生编译，安装包仅 74KB，比一张照片还小。</p></div>
-      <div class="feat"><div class="num">0 权限</div><h3>纯离线运行</h3><p>不申请任何网络权限，无广告、无追踪、无后台偷偷联网，你的数据不出手表。</p></div>
-      <div class="feat"><div class="num">省电</div><h3>传感器即用即停</h3><p>指南针、水平仪等传感器页面在切后台或退出时自动退订，不偷跑一度电。</p></div>
+      <div class="feat"><div class="num">89 KB</div><h3>极致小包体</h3><p>纯代码实现，蓝河原生编译，装下 9 款工具（含台球游戏）也仅 89KB，比一张照片还小。</p></div>
+      <div class="feat"><div class="num">手表端升级</div><h3>联网下载更新</h3><p>设置里「检查更新 + 下载更新」两步搞定，无需手机调试器；GitHub 直连失败自动走国内加速镜像。</p></div>
+      <div class="feat"><div class="num">省电</div><h3>传感器即用即停</h3><p>水平仪等传感器页面在切后台或退出时自动退订，不偷跑一度电。</p></div>
     </div>
   </div>
 </section>
@@ -238,17 +251,24 @@ footer a{color:var(--acc)}
     <div class="dl">
       <div class="dl-card rec">
         <span class="tag">iQOO Watch GT2</span>
-        <h3>GT2 版安装包（v1.1.0）</h3>
-        <div class="size">74 KB · 432×514 方屏 · BlueOS 3 原生构建</div>
-        <a class="dl-btn main" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.0/com.toolbox.watch.debug.1.1.0.rpk">国内加速下载</a>
-        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.0/com.toolbox.watch.debug.1.1.0.rpk">GitHub 直链</a>
+        <h3>GT2 版安装包（v1.1.6）</h3>
+        <div class="size">89 KB · 432×514 方屏 · BlueOS 3 原生构建</div>
+        <a class="dl-btn main" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.6/com.toolbox.watch.debug.1.1.6.rpk">国内加速下载</a>
+        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.6/com.toolbox.watch.debug.1.1.6.rpk">GitHub 直链</a>
       </div>
       <div class="dl-card">
         <span class="tag" style="background:rgba(76,141,255,.15);color:var(--acc2)">iQOO Watch GT</span>
-        <h3>GT 版安装包（v1.1.0）</h3>
-        <div class="size">74 KB · 390×450 方屏 · 兼容初代蓝河系统</div>
-        <a class="dl-btn main" style="background:linear-gradient(135deg,var(--acc2),#3079ff);color:#fff;box-shadow:0 6px 24px rgba(76,141,255,.3)" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.0/com.toolbox.watch.debug.1.1.0.gt.rpk">国内加速下载</a>
-        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.0/com.toolbox.watch.debug.1.1.0.gt.rpk">GitHub 直链</a>
+        <h3>GT 版安装包（v1.1.6）</h3>
+        <div class="size">89 KB · 390×450 方屏 · 兼容初代蓝河系统</div>
+        <a class="dl-btn main" style="background:linear-gradient(135deg,var(--acc2),#3079ff);color:#fff;box-shadow:0 6px 24px rgba(76,141,255,.3)" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.6/com.toolbox.watch.debug.1.1.6.gt.rpk">国内加速下载</a>
+        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.6/com.toolbox.watch.debug.1.1.6.gt.rpk">GitHub 直链</a>
+      </div>
+      <div class="dl-card">
+        <span class="tag" style="background:rgba(48,209,88,.15);color:#30d158">iQOO Watch 3</span>
+        <h3>Watch 3 版安装包（v1.1.6）</h3>
+        <div class="size">89 KB · 466×466 圆屏 · 全新圆屏适配</div>
+        <a class="dl-btn main" style="background:linear-gradient(135deg,#30d158,#28a745);color:#fff;box-shadow:0 6px 24px rgba(48,209,88,.3)" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.6/com.toolbox.watch.debug.1.1.6.w3.rpk">国内加速下载</a>
+        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.1.6/com.toolbox.watch.debug.1.1.6.w3.rpk">GitHub 直链</a>
       </div>
     </div>
     <div class="hist">历史版本与源码：<a href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases" target="_blank">Releases 归档</a> · <a href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">源码仓库（国内加速）</a></div>
@@ -260,18 +280,18 @@ footer a{color:var(--acc)}
     <div class="sec-head">
       <div class="kicker">Install</div>
       <h2>三步装上手表</h2>
-      <p>GT2 / GT 均运行蓝河操作系统，安装流程相同。</p>
+      <p>GT2 / GT / Watch 3 均运行蓝河操作系统，安装流程相同。</p>
     </div>
     <div class="steps">
-      <div class="step"><h3>下载 rpk 到手机</h3><p><b>按手表型号选包</b>：GT2 下载标准包，GT 下载带 <code>.gt</code> 后缀的包，将 <code>.rpk</code> 保存到手机本地存储。<b style="color:#ff6482">装过 v1.0.x 旧版本请务必先卸载</b>（v1.1.0 已更换为蓝河应用包格式）。</p></div>
+      <div class="step"><h3>下载 rpk 到手机</h3><p><b>按手表型号选包</b>：GT2 下载标准包，GT 下载带 <code>.gt</code> 后缀的包，Watch 3 下载带 <code>.w3</code> 后缀的包，将 <code>.rpk</code> 保存到手机本地存储。<b style="color:#ff6482">装过 v1.0.x 旧版本请务必先卸载</b>（v1.1.x 已更换为蓝河应用包格式）。</p></div>
       <div class="step"><h3>安装快应用调试器</h3><p>在手机应用商店搜索并安装 <code>快应用调试器</code>（vivo 商店可搜）。</p></div>
-      <div class="step"><h3>推送至手表</h3><p>调试器 → 本地安装 → 选择 rpk → 推送到已配对的 GT2，手表上即刻出现工具箱。</p></div>
+      <div class="step"><h3>推送至手表</h3><p>调试器 → 本地安装 → 选择 rpk → 推送到已配对的手表，手表上即刻出现工具箱。</p></div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">全能工具箱 v1.1.0 · 适配 iQOO Watch GT2 / GT · <a href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">GitHub</a></div>
+  <div class="wrap">全能工具箱 v1.1.6 · 适配 iQOO Watch GT2 / GT / Watch 3 · <a href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">GitHub</a></div>
 </footer>
 </body>
 </html>
