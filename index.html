@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全能工具箱 · iQOO Watch GT2</title>
-<meta name="description" content="iQOO Watch GT2 全能工具箱 v1.0.1 — 9 款实用小工具，28KB 极致轻量，纯离线运行，432×514 方屏适配。">
+<meta name="description" content="iQOO Watch GT2 全能工具箱 v1.0.4 — 9 款实用小工具，43KB 极致轻量，纯离线运行，432×514 方屏适配，已修复全黑屏。">
 <style>
 :root{
   --bg:#07070c; --bg2:#0d0d15; --card:rgba(255,255,255,.035); --line:rgba(255,255,255,.08);
@@ -146,7 +146,7 @@ footer a{color:var(--acc)}
 
 <header class="hero wrap">
   <div>
-    <span class="badge"><span class="dot"></span>v1.0.2 · 适配 iQOO Watch GT2 · 修复启动慢 / 全黑屏</span>
+    <span class="badge"><span class="dot"></span>v1.0.4 · 适配 iQOO Watch GT2 · 修复全黑屏</span>
     <h1>方寸之间<br><span class="grad">九种兵器</span></h1>
     <p class="lead">为 iQOO Watch GT2 打造的全能工具箱。9 款日常高频小工具装进 28KB 的极致轻量快应用，纯离线运行，抬腕即用。</p>
     <div class="cta">
@@ -235,17 +235,17 @@ footer a{color:var(--acc)}
     <div class="dl">
       <div class="dl-card rec">
         <span class="tag">推荐 · 装表用这个</span>
-        <h3>Release 正式包</h3>
-        <div class="size">28 KB · v1.0.2 · 已修复启动慢/黑屏</div>
-        <a class="dl-btn main" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.2/com.toolbox.watch.release.1.0.2.rpk">国内加速下载</a>
-        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.2/com.toolbox.watch.release.1.0.2.rpk">GitHub 直链</a>
+        <h3>标准安装包（debug）</h3>
+        <div class="size">43 KB · v1.0.4 · 已修复全黑屏</div>
+        <a class="dl-btn main" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.4/com.toolbox.watch.debug.1.0.4.rpk">国内加速下载</a>
+        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.4/com.toolbox.watch.debug.1.0.4.rpk">GitHub 直链</a>
       </div>
       <div class="dl-card">
-        <span class="tag" style="background:rgba(76,141,255,.15);color:var(--acc2)">开发者用</span>
-        <h3>Debug 调试包</h3>
-        <div class="size">43 KB · v1.0.2 · 仅配合 hap 调试器使用</div>
-        <a class="dl-btn main" style="background:linear-gradient(135deg,var(--acc2),#3079ff);color:#fff;box-shadow:0 6px 24px rgba(76,141,255,.3)" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.2/com.toolbox.watch.debug.1.0.2.rpk">国内加速下载</a>
-        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.2/com.toolbox.watch.debug.1.0.2.rpk">GitHub 直链</a>
+        <span class="tag" style="background:rgba(76,141,255,.15);color:var(--acc2)">黑屏时换这个</span>
+        <h3>兼容备用包（LTS）</h3>
+        <div class="size">43 KB · v1.0.4 · 旧版工具链构建</div>
+        <a class="dl-btn main" style="background:linear-gradient(135deg,var(--acc2),#3079ff);color:#fff;box-shadow:0 6px 24px rgba(76,141,255,.3)" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.4/com.toolbox.watch.debug-lts.1.0.4.rpk">国内加速下载</a>
+        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.4/com.toolbox.watch.debug-lts.1.0.4.rpk">GitHub 直链</a>
       </div>
     </div>
   </div>
@@ -259,7 +259,7 @@ footer a{color:var(--acc)}
       <p>iQOO Watch GT2 采用 vivo 手表快应用生态，安装流程如下。</p>
     </div>
     <div class="steps">
-      <div class="step"><h3>下载 rpk 到手机</h3><p>点击上方 <b>Release 正式包</b> 的加速链接，将 <code>.rpk</code> 安装包保存到手机本地存储。旧版本请先卸载。</p></div>
+      <div class="step"><h3>下载 rpk 到手机</h3><p>点击上方 <b>标准安装包</b> 的加速链接，将 <code>.rpk</code> 安装包保存到手机本地存储。装过旧版本请先卸载再装新包。</p></div>
       <div class="step"><h3>安装快应用调试器</h3><p>在手机应用商店搜索并安装 <code>快应用调试器</code>（vivo 商店可搜）。</p></div>
       <div class="step"><h3>推送至手表</h3><p>调试器 → 本地安装 → 选择 rpk → 推送到已配对的 GT2，手表上即刻出现工具箱。</p></div>
     </div>
@@ -267,7 +267,7 @@ footer a{color:var(--acc)}
 </section>
 
 <footer>
-  <div class="wrap">全能工具箱 v1.0.2 · 为 iQOO Watch GT2 而生 · <a href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">GitHub</a></div>
+  <div class="wrap">全能工具箱 v1.0.4 · 为 iQOO Watch GT2 而生 · <a href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">GitHub</a></div>
 </footer>
 </body>
 </html>
