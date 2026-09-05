@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>全能工具箱 · iQOO Watch GT2</title>
-<meta name="description" content="iQOO Watch GT2 全能工具箱 v1.0.0 — 9 款实用小工具，26KB 极致轻量，纯离线运行。">
+<meta name="description" content="iQOO Watch GT2 全能工具箱 v1.0.1 — 9 款实用小工具，28KB 极致轻量，纯离线运行，432×514 方屏适配。">
 <style>
 :root{
   --bg:#07070c; --bg2:#0d0d15; --card:rgba(255,255,255,.035); --line:rgba(255,255,255,.08);
@@ -51,23 +51,22 @@ h1 .grad{background:linear-gradient(120deg,var(--acc) 20%,#ff9f0a 55%,var(--acc2
 .meta{margin-top:26px;font-size:13px;color:var(--sub);display:flex;gap:18px;flex-wrap:wrap}
 @media(max-width:900px){.meta{justify-content:center}}
 
-/* 手表 */
+/* 手表（iQOO Watch GT2 · 432×514 方屏） */
 .watch-zone{display:grid;place-items:center;position:relative}
-.watch{position:relative;width:min(360px,80vw);aspect-ratio:1;border-radius:50%;padding:14px;
-  background:conic-gradient(from 0deg,#2a2a35,#0f0f16,#3a3a48,#0f0f16,#2a2a35);
-  box-shadow:0 40px 90px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.06);animation:spin 14s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.watch .inner{width:100%;height:100%;border-radius:50%;background:radial-gradient(120% 120% at 30% 20%,#15151f,#08080d 70%);
-  display:grid;place-items:center;animation:spin 14s linear infinite reverse;position:relative;overflow:hidden}
-.watch .crown{position:absolute;right:-13px;top:34%;width:14px;height:44px;border-radius:7px;background:linear-gradient(180deg,#3d3d4a,#1a1a22);z-index:2}
-.watch .btn-s{position:absolute;right:-9px;top:56%;width:9px;height:30px;border-radius:6px;background:#26262f;z-index:2}
-.w-status{position:absolute;top:9%;width:100%;text-align:center;font-size:12px;color:var(--sub);letter-spacing:2px}
+.watch{position:relative;width:min(320px,78vw);aspect-ratio:432/514;border-radius:56px;padding:12px;
+  background:linear-gradient(145deg,#43434b,#0e0e11 55%,#2c2c33);
+  box-shadow:0 40px 90px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.06)}
+.watch .inner{width:100%;height:100%;border-radius:46px;background:radial-gradient(120% 120% at 30% 20%,#15151f,#08080d 70%);
+  display:grid;place-items:center;position:relative;overflow:hidden}
+.watch .crown{position:absolute;right:-13px;top:28%;width:14px;height:52px;border-radius:7px;background:linear-gradient(180deg,#3d3d4a,#1a1a22);z-index:2}
+.watch .btn-s{position:absolute;right:-9px;top:52%;width:9px;height:34px;border-radius:6px;background:#26262f;z-index:2}
+.w-status{position:absolute;top:6%;width:100%;text-align:center;font-size:12px;color:var(--sub);letter-spacing:2px}
 .w-status b{color:var(--txt);font-size:15px;letter-spacing:0;display:block;margin-top:2px;font-weight:600}
-.w-grid{display:grid;grid-template-columns:repeat(3,56px);gap:12px;margin-top:34px}
-.w-tile{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);display:grid;place-items:center;color:var(--acc);transition:.3s}
+.w-grid{display:grid;grid-template-columns:repeat(3,54px);gap:11px;margin-top:42px}
+.w-tile{width:54px;height:54px;border-radius:15px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);display:grid;place-items:center;color:var(--acc);transition:.3s}
 .w-tile:nth-child(even){color:var(--acc2)}
 .w-tile.hot{background:linear-gradient(135deg,var(--acc),#ffb302);color:#131300;border:none;box-shadow:0 6px 24px rgba(255,214,10,.4)}
-.w-tile svg{width:24px;height:24px}
+.w-tile svg{width:23px;height:23px}
 
 /* 数据条 */
 .stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:10px 0 0}
@@ -147,9 +146,9 @@ footer a{color:var(--acc)}
 
 <header class="hero wrap">
   <div>
-    <span class="badge"><span class="dot"></span>v1.0.0 正式版 · 适配 iQOO Watch GT2</span>
+    <span class="badge"><span class="dot"></span>v1.0.1 · 适配 iQOO Watch GT2 · 修复闪退 + 新增设置</span>
     <h1>方寸之间<br><span class="grad">九种兵器</span></h1>
-    <p class="lead">为 iQOO Watch GT2 打造的全能工具箱。9 款日常高频小工具装进 26KB 的极致轻量快应用，纯离线运行，抬腕即用。</p>
+    <p class="lead">为 iQOO Watch GT2 打造的全能工具箱。9 款日常高频小工具装进 28KB 的极致轻量快应用，纯离线运行，抬腕即用。</p>
     <div class="cta">
       <a class="btn pri" href="#download">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -157,7 +156,7 @@ footer a{color:var(--acc)}
       </a>
       <a class="btn ghost" href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">查看源码仓库</a>
     </div>
-    <div class="meta"><span>⚡ 26KB 极小包体</span><span>🔒 零网络权限</span><span>🔋 传感器即用即停</span></div>
+    <div class="meta"><span>⚡ 28KB 极小包体</span><span>🔒 零网络权限</span><span>🔋 传感器即用即停</span></div>
   </div>
 
   <div class="watch-zone">
@@ -183,10 +182,10 @@ footer a{color:var(--acc)}
 
 <div class="wrap">
   <div class="stats">
-    <div class="stat"><b>26KB</b><span>Release 包体大小</span></div>
+    <div class="stat"><b>28KB</b><span>Release 包体大小</span></div>
     <div class="stat"><b>9 款</b><span>高频实用工具</span></div>
     <div class="stat"><b>0 个</b><span>网络权限申请</span></div>
-    <div class="stat"><b>466px</b><span>圆屏原生适配</span></div>
+    <div class="stat"><b>432×514</b><span>方屏原生适配</span></div>
   </div>
 </div>
 
@@ -219,7 +218,7 @@ footer a{color:var(--acc)}
       <p>手表存储寸土寸金，电量弥足珍贵。我们把它做小、做省、做干净。</p>
     </div>
     <div class="feats">
-      <div class="feat"><div class="num">26 KB</div><h3>极致小包体</h3><p>纯代码实现，无图片资源、无第三方依赖，正式签名包仅 26KB，比一张照片还小。</p></div>
+      <div class="feat"><div class="num">28 KB</div><h3>极致小包体</h3><p>纯代码实现，无图片资源、无第三方依赖，正式签名包仅 28KB，比一张照片还小。</p></div>
       <div class="feat"><div class="num">0 权限</div><h3>纯离线运行</h3><p>不申请任何网络权限，无广告、无追踪、无后台偷偷联网，你的数据不出手表。</p></div>
       <div class="feat"><div class="num">省电</div><h3>传感器即用即停</h3><p>指南针、水平仪等传感器页面在切后台或退出时自动退订，不偷跑一度电。</p></div>
     </div>
@@ -237,16 +236,16 @@ footer a{color:var(--acc)}
       <div class="dl-card rec">
         <span class="tag">推荐 · 装表用这个</span>
         <h3>Debug 调试包</h3>
-        <div class="size">40 KB · v1.0.0 · 配合快应用调试器安装</div>
-        <a class="dl-btn main" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.0/com.toolbox.watch.debug.1.0.0.rpk">国内加速下载</a>
-        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.0/com.toolbox.watch.debug.1.0.0.rpk">GitHub 直链</a>
+        <div class="size">43 KB · v1.0.1 · 配合快应用调试器安装</div>
+        <a class="dl-btn main" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.1/com.toolbox.watch.debug.1.0.1.rpk">国内加速下载</a>
+        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.1/com.toolbox.watch.debug.1.0.1.rpk">GitHub 直链</a>
       </div>
       <div class="dl-card">
         <span class="tag" style="background:rgba(76,141,255,.15);color:var(--acc2)">正式签名</span>
         <h3>Release 发布包</h3>
-        <div class="size">26 KB · v1.0.0 · 用于正式分发上架</div>
-        <a class="dl-btn main" style="background:linear-gradient(135deg,var(--acc2),#3079ff);color:#fff;box-shadow:0 6px 24px rgba(76,141,255,.3)" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.0/com.toolbox.watch.release.1.0.0.rpk">国内加速下载</a>
-        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.0/com.toolbox.watch.release.1.0.0.rpk">GitHub 直链</a>
+        <div class="size">28 KB · v1.0.1 · 用于正式分发上架</div>
+        <a class="dl-btn main" style="background:linear-gradient(135deg,var(--acc2),#3079ff);color:#fff;box-shadow:0 6px 24px rgba(76,141,255,.3)" href="https://gh-proxy.com/https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.1/com.toolbox.watch.release.1.0.1.rpk">国内加速下载</a>
+        <a class="dl-btn alt" href="https://github.com/zy00820/iqoo-watch-toolbox-release/releases/download/v1.0.1/com.toolbox.watch.release.1.0.1.rpk">GitHub 直链</a>
       </div>
     </div>
   </div>
@@ -268,7 +267,7 @@ footer a{color:var(--acc)}
 </section>
 
 <footer>
-  <div class="wrap">全能工具箱 v1.0.0 · 为 iQOO Watch GT2 而生 · <a href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">GitHub</a></div>
+  <div class="wrap">全能工具箱 v1.0.1 · 为 iQOO Watch GT2 而生 · <a href="https://github.com/zy00820/iqoo-watch-toolbox" target="_blank">GitHub</a></div>
 </footer>
 </body>
 </html>
